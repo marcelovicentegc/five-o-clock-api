@@ -35,8 +35,8 @@ let getClosest () =
         |> List.minBy (fun (i:TZInfo) -> i.minDiff)
 
 
-let startServer argv = 
-    let port = 8080
+let startServer (argv:string[]) = 
+    let port = if argv.Length = 0 then 8080 else (int argv.[0])
 
     let cfg =
               { defaultConfig with
