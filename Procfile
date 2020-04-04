@@ -1,1 +1,1 @@
-web: dotnet run 8000
+web: dotnet run
